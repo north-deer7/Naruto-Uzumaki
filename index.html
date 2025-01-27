@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="This project is a personal profile webpage dedicated to Naruto Uzumaki, the iconic protagonist of the anime and manga series 'Naruto.' The single-page HTML site showcases various aspects of Naruto's character, including his background, interests, and abilities.">
+    <title>Naruto Uzumaki Profile Page</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            /* Ensures padding and borders are included in element's width/height */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling */
+        }
+
+        main {
+            padding: 20px 20px;
+        }
+
+        .border100 {
+            border: 2px solid #444444;
+            border-radius: 10px;
+            width: fit-content;
+            align-items: center;
+            margin: 0px auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #444444;
+            padding: 10px 0px;
+        }
+
+        #grey {
+            border: 3px solid rgb(211, 211, 211);
+            text-align: center;
+            margin: auto;
+            width: 900px;
+            background-color: rgb(212, 212, 212);
+            margin-top: 100px;
+            margin-bottom: 100px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            border: 2px solid #444444;
+        }
+
+        form input {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #444444;
+            width: 400px;
+            margin-bottom: 15px;
+        }
+
+        #q {
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px 0;
+            background-color: #555555;
+            margin: 0px 0px;
+        }
+
+        #div {
+            color: white;
+            text-align: center;
+            padding: 27px;
+            font-size: 15px;
+        }
+
+        .centre {
+            text-decoration: underline;
+            color: #444444;
+            margin: 20px 0px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .w:hover {
+            border-bottom: 2px solid white;
+        }
+
+        .margin {
+            margin: 0px 30px;
+            margin-bottom: 40px;
+            margin-top: 20px;
+        }
+
+        .centre2 {
+            margin: 19px 0px;
+        }
+
+        .x {
+            margin: 30px;
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+
+        li {
+            padding: 5px 0px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table th,
+        table td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        table th {
+            background-color: #444444;
+            color: white;
+            border-bottom: 1px solid #444444;
+            border-top: 1px solid #444444;
+            border-collapse: separate;
+        }
+
+        .border {
+            border-left: 1px solid #444444;
+            border-right: 0px solid #444444;
+        }
+
+        .border2 {
+            border-right: 1px solid #444444;
+            border-left: 0px solid #444444;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        form input[type="submit"] {
+            background-color: #444444;
+            color: white;
+        }
+
+        .back {
+            background-color: #444444;
+        }
+
+        footer {
+            padding: 20px;
+        }
+
+        p a {
+            margin: 16px 0px;
+        }
+
+        .black {
+            color: white;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555555;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 600px) {
+
+            #grey {
+                width: 100%;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            form input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .centre {
+                font-size: 1.5rem;
+            }
+
+            table th,
+            table td {
+                padding: 8px;
+            }
+
+            table {
+                width: 100%;
+                font-size: 0.9rem;
+            }
+
+            .margin {
+                margin: 10px 15px;
+            }
+
+            .x {
+                margin: 10px;
+                padding-left: 20px;
+            }
+
+            footer {
+                padding: 10px;
+            }
+
+            li {
+                white-space: normal;
+            }
+
+            .margin,
+            .x {
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            #q a {
+                margin: 5px 0;
+            }
+
+            header {
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="grey2">
+            <div id="div">
+                <h1 class="h1">Naruto Uzumaki</h1>
+            </div>
+
+            <nav>
+                <div id="q">
+                    <a class="w" href="#About Naruto Uzumaki">About Naruto Uzumaki</a>&#160;&#160;&#160;
+                    <a class="w" href="#Hobbies and Interests Of Naruto Uzumaki">Hobbies and
+                        Interests</a>&#160;&#160;&#160;
+                    <a class="w" href="#Favorite-Jutsus">Favorite Jutsus</a>&#160;&#160;&#160;
+                    <a class="w" href="#shresth">Contact</a>&#160;&#160;&#160;
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="About Naruto Uzumaki">
+            <h2 class="centre">About Naruto Uzumaki</h2>
+            <P class="margin">Naruto Uzumaki is the <strong>main protagonist</strong> of the popular anime and manga
+                series
+                <strong>"Naruto,"</strong> created by <strong>Masashi Kishimoto</strong>. He is a young ninja from the
+                Hidden Leaf Village who dreams of becoming <strong>Hokage</strong>, the village leader, to gain
+                recognition and respect from his peers. <strong>Orphaned</strong> at a young age, Naruto grows up facing
+                prejudice because he is the jinchuriki of the <strong>Nine-Tails</strong>, <em>a powerful fox
+                    spirit</em> that once attacked the village. Despite his struggles, Naruto is determined, energetic,
+                and fiercely loyal to his friends, ultimately becoming a hero who protects his village and realizes his
+                dream.
+            </P>
+        </section>
+        <section id="Hobbies and Interests Of Naruto Uzumaki">
+            <h2 class="centre">Hobbies and Interests</h2>
+            <article>
+                <h3 class="centre centre2">Hobbies</h3>
+                <ul class="x">
+                    <li><strong>Eating Ramen:</strong> Naruto loves eating ramen, especially from the Ichiraku Ramen
+                        shop. It's his favorite food and
+                        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;often
+                        motivates him during tough times.</li>
+                    <li><strong>Training:</strong> He spends a lot of time training to become stronger and master new
+                        jutsus.</li>
+                    <li><strong>Spending Time with Friends:</strong> Naruto values his friendships deeply and enjoys
+                        hanging out with his teammates,
+                        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                        "Useless Sakura" and "Sasuke Uchiha".
+                </ul>
+            </article>
+            <article>
+                <h3 class="centre  centre2">Interests</h3>
+                <ul class="x">
+                    <li> <strong>Becoming Hokage:</strong> His main goal is to be recognized as the strongest ninja and
+                        become the Hokage, showing
+                        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                        everyone that he is not just a reckless kid.</li>
+                    <li><strong>Protecting His Village:</strong> Naruto has a strong sense of duty to protect the Hidden
+                        Leaf Village and its inhabitants.</li>
+                    <li><strong>Learning New Jutsus:</strong> He constantly seeks to improve his skills by learning new
+                        jutsus and techniques.</li>
+                </ul>
+            </article>
+        </section>
+        <section id="Favorite-Jutsus">
+            <h2 class="centre">Favorite Jutsus</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="border">Favorite Jutsus</th>
+                        <th class="border2">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rasengan</td>
+                        <td>A powerful spinning ball of chakra that can cause massive damage.</td>
+                    </tr>
+                    <tr>
+                        <td>Shadow Clone Jutsu</td>
+                        <td>Creates multiple copies of the user to confuse and overwhelm opponents.</td>
+                    </tr>
+                    <tr>
+                        <td>Sage Mode</td>
+                        <td>A technique that enhances the user's abilities by using natural energy.</td>
+                    </tr>
+                    <tr>
+                        <td>Nine-Tails Chakra</td>
+                        <td>Harnessing the power of Kurama, the Nine-Tails, for increased strength.</td>
+                    </tr>
+                    <tr>
+                        <td>Rasenshuriken</td>
+                        <td>An advanced Rasengan variant that creates a massive shuriken-shaped attack.</td>
+                    </tr>
+                    <tr>
+                        <td>Sexy Jutsu</td>
+                        <td>A comedic transformation technique that turns the user into a distracting figure.</td>
+                    </tr>
+                    <tr>
+                        <td>Summoning Jutsu</td>
+                        <td>Allows Naruto to summon powerful toads like Gamabunta for battle assistance.</td>
+                    </tr>
+                    <tr>
+                        <td>Tailed Beast Bomb</td>
+                        <td>A devastating energy blast unleashed by Kurama, capable of massive
+                            destruction.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="shresth">
+            <h2 class="centre">Contact</h2>
+            <form class="border100">
+                <label for="first name">First Name:</label><br>
+                <input type="text" name="first name" id="first name" placeholder="Your First Name" required
+                    class="first name" required><br><br>
+
+                <label for="last name">Last Name:</label><br>
+                <input type="text" name="last name" id="last name" placeholder="Your Last Name" class="last name"
+                    required>
+                <br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email" placeholder="Your Email" required class="email"><br><br>
+
+
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" id="password" placeholder="Your Password" class="password"
+                    required><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+    <footer class="back">
+        <p class="link-container">
+            <a href="#div" class="black">Back To Top</a>
+        </p>
+    </footer>
+</body>
+
+</html>
